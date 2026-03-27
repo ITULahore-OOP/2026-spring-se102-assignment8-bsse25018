@@ -9,16 +9,20 @@
 using namespace std;
 
 int main()
-{
-    cout << "=============================="<<endl;
-    cout << "   SMART UNIVERSITY SYSTEM\n"<<endl;
-    cout << "==============================\n"<<endl;
+{    
+    cout << "==============================" << endl;
+    cout << "  ASSIGNMENT 8 | BSSE-25018" << endl << endl;
+    cout << "==============================" << endl << endl;
+
+    cout << "==============================" << endl;
+    cout << "   SMART UNIVERSITY SYSTEM" << endl << endl;
+    cout << "==============================" << endl << endl;
 
     // ---------- BUILD DEPARTMENT ----------
 
     string deptName;
 
-    cout << "Build a Department First\n";
+    cout << "Build a Department First" << endl;
     cout << "Enter Department Name: ";
     cin >> deptName;
 
@@ -40,28 +44,24 @@ int main()
 
     do
     {
-        cout << "\n=================================\n";
-        cout << "            MENU\n";
-        cout << "=================================\n";
+        cout << endl << "=================================" << endl;
+        cout << "            MENU" << endl;
+        cout << "=================================" << endl;
 
-        cout << "1. Create Student\n";
-        cout << "2. Create Staff\n";
-        cout << "3. Create Teaching Assistant\n";
-        cout << "4. Add Member to Department\n";
-        cout << "5. Display All Roles\n";
-        cout << "6. Grade Assignment\n";
-        cout << "7. Create Tutoring Session\n";
-        cout << "8. Merge Two Sessions (+)\n";
-        cout << "9. Compare Two Sessions (>)\n";
-        cout << "0. Exit\n";
+        cout << "1. Create Student" << endl;
+        cout << "2. Create Staff" << endl;
+        cout << "3. Create Teaching Assistant" << endl;
+        cout << "4. Add Member to Department" << endl;
+        cout << "5. Display All Roles" << endl;
+        cout << "6. Grade Assignment" << endl;
+        cout << "7. Create Tutoring Session" << endl;
+        cout << "8. Merge Two Sessions (+)" << endl;
+        cout << "9. Compare Two Sessions (>)" << endl;
+        cout << "0. Exit" << endl;
 
-        cout << "---------------------------------\n";
+        cout << "---------------------------------" << endl;
         cout << "Enter Choice: ";
         cin >> choice;
-
-        // ===============================
-        // CREATE STUDENT
-        // ===============================
 
         if (choice == 1)
         {
@@ -69,7 +69,7 @@ int main()
             int id;
             double cgpa;
 
-            cout << "\nEnter Name: ";
+            cout << endl << "Enter Name: ";
             cin >> name;
 
             cout << "Enter ID: ";
@@ -83,12 +83,8 @@ int main()
 
             studentCount++;
 
-            cout << "Student Created\n";
+            cout << "Student Created" << endl;
         }
-
-        // ===============================
-        // CREATE STAFF
-        // ===============================
 
         else if (choice == 2)
         {
@@ -96,7 +92,7 @@ int main()
             int id, level;
             double salary;
 
-            cout << "\nEnter Name: ";
+            cout << endl << "Enter Name: ";
             cin >> name;
 
             cout << "Enter ID: ";
@@ -118,12 +114,8 @@ int main()
 
             staffCount++;
 
-            cout << "Staff Created\n";
+            cout << "Staff Created" << endl;
         }
-
-        // ===============================
-        // CREATE TA
-        // ===============================
 
         else if (choice == 3)
         {
@@ -131,7 +123,7 @@ int main()
             int id, level, hours;
             double cgpa, salary;
 
-            cout << "\nEnter Name: ";
+            cout << endl << "Enter Name: ";
             cin >> name;
 
             cout << "Enter ID: ";
@@ -165,20 +157,16 @@ int main()
 
             taCount++;
 
-            cout << "Teaching Assistant Created\n";
+            cout << "Teaching Assistant Created" << endl;
         }
-
-        // ===============================
-        // ADD TO DEPARTMENT
-        // ===============================
 
         else if (choice == 4)
         {
             int type;
 
-            cout << "\n1 Student\n";
-            cout << "2 Staff\n";
-            cout << "3 TA\n";
+            cout << endl << "1 Student" << endl;
+            cout << "2 Staff" << endl;
+            cout << "3 TA" << endl;
 
             cout << "Select Type: ";
             cin >> type;
@@ -200,29 +188,21 @@ int main()
             }
             else
             {
-                cout << "Create Member First\n";
+                cout << "Create Member First" << endl;
             }
         }
 
-        // ===============================
-        // DISPLAY ROLES
-        // ===============================
-
         else if (choice == 5)
         {
-            cout << "\nDepartment Members:\n";
+            cout << endl << "Department Members:" << endl;
             dept.displayAllRoles();
         }
-
-        // ===============================
-        // GRADE ASSIGNMENT
-        // ===============================
 
         else if (choice == 6)
         {
             if (taCount == 0)
             {
-                cout << "No TA Available\n";
+                cout << "No TA Available" << endl;
             }
             else
             {
@@ -234,8 +214,8 @@ int main()
                      << "): ";
                 cin >> index;
 
-                cout << "1 Numeric\n";
-                cout << "2 Letter\n";
+                cout << "1 Numeric" << endl;
+                cout << "2 Letter" << endl;
 
                 cout << "Choice: ";
                 cin >> type;
@@ -263,16 +243,12 @@ int main()
             }
         }
 
-        // ===============================
-        // CREATE SESSION
-        // ===============================
-
         else if (choice == 7)
         {
             if (taCount == 0 ||
                 studentCount == 0)
             {
-                cout << "Need Student and TA\n";
+                cout << "Need Student and TA" << endl;
             }
             else
             {
@@ -297,19 +273,15 @@ int main()
 
                 sessionCount++;
 
-                cout << "Session Created\n";
+                cout << "Session Created" << endl;
             }
         }
-
-        // ===============================
-        // MERGE SESSIONS
-        // ===============================
 
         else if (choice == 8)
         {
             if (sessionCount < 2)
             {
-                cout << "Need 2 sessions\n";
+                cout << "Need 2 sessions" << endl;
             }
             else
             {
@@ -329,15 +301,11 @@ int main()
             }
         }
 
-        // ===============================
-        // COMPARE SESSIONS
-        // ===============================
-
         else if (choice == 9)
         {
             if (sessionCount < 2)
             {
-                cout << "Need 2 sessions\n";
+                cout << "Need 2 sessions" << endl;
             }
             else
             {
@@ -352,18 +320,18 @@ int main()
                 if (*sessions[a] >
                     *sessions[b])
                 {
-                    cout << "First Longer\n";
+                    cout << "First Longer" << endl;
                 }
                 else
                 {
-                    cout << "Second Longer\n";
+                    cout << "Second Longer" << endl;
                 }
             }
         }
 
     } while (choice != 0);
 
-    cout << "\nProgram Ended\n";
+    cout << endl << "Program Ended" << endl;
 
     return 0;
 }
